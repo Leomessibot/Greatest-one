@@ -44,13 +44,13 @@ class evamaria(Client):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', ''))
 API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7325252717:AAGoDI5JUI3CwoMzyhK15X-7bBQkEHPDcwA')
 
 # Bot settings
 CACHE_TIME = 300
 USE_CAPTION_FILTER = False
 NOR_IMG = environ.get('NOR_IMG', "https://telegra.ph/file/89de0d28af87a9f06751f.jpg")
-PICS = (environ.get('PICS', '')).split()
+PICS = (environ.get('PICS', 'https://envs.sh/b4t.jpg')).split()
 SPELL_IMG = environ.get('SPELL_IMG',"https://telegra.ph/file/314928baed9a9c277072f.jpg")
 
 # Welcome area
@@ -60,8 +60,8 @@ MELCOW_VID = environ.get('MELCOW_VID',"https://telegra.ph/file/b26637d70f3630a7e
 
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6874351976 6047510747').split()] 
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001831375385 -10012345688 -1001658823824 -1001659557643 -1001895564079 -10027378293 -10073837388 -1001765720202').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7040444713').split()] 
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002403952364').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_grp = environ.get('AUTH_GROUP')
@@ -74,8 +74,8 @@ TMP_DOWNLOAD_DIRECTORY = environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
 COMMAND_HAND_LER = ("/")
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://bro:bro@mrz.o5yqa.mongodb.net/?retryWrites=true&w=majority&appName=mrz")
+DATABASE_NAME = environ.get('DATABASE_NAME', "mrz")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 MONGO_URL = os.environ.get('MONGO_URL', "mongodb+srv://amubaby:amubaby@lallus.84sdfpw.mongodb.net/?retryWrites=true&w=majority&appName=lallus")
 
@@ -89,6 +89,7 @@ MAX_BTN = int(environ.get('MAX_BTN', "10"))
 S_GROUP = environ.get('S_GROUP',"https://t.me/cinemaworld_123")
 MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/cinemaworld_update")
 FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/+qFrndJdRfucwMjQ0")
+MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1002457213493')) 
 MSG_ALRT = environ.get('MSG_ALRT', '𝐓𝐡𝐚𝐧𝐤 𝐲𝐨𝐮 𝐒𝐢𝐫 💜')
 FILE_CHANNEL = int(environ.get('FILE_CHANNEL', 0))
 LOG_CHANNEL = -1002208570147
@@ -110,10 +111,10 @@ PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), False)
 
 #Fsub
-auth_channel = environ.get('AUTH_CHANNEL', "-1002099225836")
+auth_channel = environ.get('AUTH_CHANNEL', "")
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 # Set to False inside the bracket if you don't want to use Request Channel else set it to Channel ID
-REQ_CHANNEL =environ.get('REQ_CHANNEL', "-1002099225836")
+REQ_CHANNEL =environ.get('REQ_CHANNEL', "")
 REQ_CHANNEL = int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else False
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 
