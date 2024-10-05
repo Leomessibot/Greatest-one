@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 BATCH_FILES = {}
 
 @Client.on_message(filters.command("start") & filters.incoming)
-if len(message.command) == 2 and message.command[1].startswith('getfile'):
+    if len(message.command) == 2 and message.command[1].startswith('getfile'):
         searches = message.command[1].split("-", 1)[1] 
         search = searches.replace('-',' ')
         message.text = search 
